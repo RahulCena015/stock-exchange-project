@@ -1,0 +1,27 @@
+package com.rahul.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class Company {
+	
+	private Long id;
+	
+	private String name;
+	private String cregId;
+	private String ctype;
+	private String parentOrg;
+	private String modeOfOperate;
+	private String serviceCode;
+	
+	@OneToOne
+	@JoinColumn(name="aidFk")
+	private Address addr; //HAS-A
+	
+
+}

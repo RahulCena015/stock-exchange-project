@@ -1,0 +1,17 @@
+package com.rahul.handler;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.rahul.exceptions.CompanyNotFoundException;
+
+@RestControllerAdvice
+public class CustomExceptionHandler {
+	
+	@ExceptionHandler(CompanyNotFoundException.class)
+	public ResponseEntity<String> handleCompanyNotFoundException(CompanyNotFoundException cnfe){
+		return ResponseEntity.internalServerError().body(cnfe.getMessage());
+	}
+
+}

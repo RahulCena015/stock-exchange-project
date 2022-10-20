@@ -1,0 +1,19 @@
+package com.rahul.entity;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+public class Company {
+	
+	private Long id;
+	
+	private String name;
+	private String cregId;
+	private String ctype;
+	
+	@OneToOne
+	@JoinColumn(name="aidFk")
+	private Address addr; //HAS-A
+	
+
+}

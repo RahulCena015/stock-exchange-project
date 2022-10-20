@@ -1,0 +1,5 @@
+package com.rahul.exceptions;
+
+public class CompanyNotFoundException extends Exception {
+
+}

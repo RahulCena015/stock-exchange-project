@@ -1,0 +1,5 @@
+package com.rahul.response.payload;
+
+public class ErrorMessage {
+
+}
